@@ -1,6 +1,6 @@
 description: >
   Add two numbers provided as integer params
- 
+
 parameters:
   numA:
     type: integer
