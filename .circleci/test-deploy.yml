@@ -17,8 +17,8 @@ jobs:
       - checkout
       # Run your orb's commands to validate them.
       - calculator/add:
-        numaA: 1
-        numB: 2
+          - numaA: 1
+          - numB: 2
 workflows:
   test-deploy:
     jobs:
