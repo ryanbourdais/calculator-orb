@@ -1,0 +1,31 @@
+description: Perform a mathematical operation on two numbers and save results.
+
+parameters:
+  func:
+    description: The operation to perform on the given numbers
+    type: enum
+    enum:
+      - "ADD"
+      - "SUB"
+      - "MUL"
+      - "DIV"
+  numA:
+    type: integer
+    description: "The first number"
+  numB:
+    type: integer
+    description: "The second number"
+
+  docker:
+    - image: cimg/base:current
+
+  steps:
+    - checkout
+    - when:
+        condition:
+          equals: [ "ADD", <<parameters.func>> ]
+        steps:
+          - add:
+              numA: <<parameters.numA>>
+              numB: <<parameters.numB>>
+
