@@ -16,15 +16,15 @@ parameters:
     type: integer
     description: "The second number"
 
-  docker:
-    - image: cimg/base:current
+docker:
+  - image: cimg/base:current
 
-  steps:
-    - checkout
-    - when:
-        condition:
+steps:
+  - checkout
+  - when:
+      condition:
           equals: [ "ADD", <<parameters.func>> ]
-        steps:
-          - add:
-              numA: <<parameters.numA>>
-              numB: <<parameters.numB>>
+      steps:
+        - add:
+            numA: <<parameters.numA>>
+            numB: <<parameters.numB>>
