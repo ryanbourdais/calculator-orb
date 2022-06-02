@@ -1,7 +1,6 @@
 description: >
-  This command echos "Hello World" using file inclusion.
-# What will this command do?
-# Descriptions should be short, simple, and clear.
+  Add two numbers provided as integer params
+ 
 parameters:
   numA:
     type: integer
