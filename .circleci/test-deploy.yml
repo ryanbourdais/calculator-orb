@@ -35,8 +35,8 @@ workflows:
           filters: *filters
           post-steps:
             - run: 
-              name: Should Equal 3
-              command: grep -xq 3 /tmp/ADD_RESULT.txt
+                name: Should Equal 3
+                command: grep -xq 3 /tmp/ADD_RESULT.txt
       - orb-tools/pack:
           filters: *filters
       - orb-tools/publish:
