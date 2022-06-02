@@ -1,0 +1,18 @@
+description: >
+  This command echos "Hello World" using file inclusion.
+# What will this command do?
+# Descriptions should be short, simple, and clear.
+parameters:
+  numA:
+    type: integer
+    description: "The first number"
+  numB:
+    type: integer
+    description: "The second number"
+steps:
+  - run:
+      environment:
+        PARAM_NUMA: <<parameters.numA>>
+        PARAM_NUMB: <<parameters.numB>>
+      name: Adding <<parameters.numA>> + <<parameters.numB>>
+      command: <<include(scripts/add.sh)>>

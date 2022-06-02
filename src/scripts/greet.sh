@@ -1,2 +1,2 @@
 #!/bin/bash
-echo Hello "${PARAM_TO}"
+echo (("${PARAM_NUMA}" + "${PARAM_NUMB}"))
