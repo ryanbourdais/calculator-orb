@@ -19,6 +19,9 @@ jobs:
       - calculator/add:
           numA: 1
           numB: 2
+      - run:
+          name: Should Equal 3
+          command: grep -xq 3 /tmp/ADD_RESULT.txt
 workflows:
   test-deploy:
     jobs:
